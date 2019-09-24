@@ -1,7 +1,7 @@
 <?php
 namespace Oniti\Migrations;
 
-require_once(__DIR__.'/../../private/global/core/env.php');
+require_once(__DIR__.'/../../../../private/global/core/env.php');
 
 use PDO;
 use Exception;
@@ -14,7 +14,7 @@ class Migration{
      * Connection a la base de donnée
      */
     private $conn;
-    private $dir_migrations = __DIR__.'/../../migrations/';
+    private $dir_migrations = __DIR__.'/../../../../migrations/';
 
     function __construct() {
 		try {
@@ -153,7 +153,7 @@ class Migration{
             if((empty($files_to_keep) || in_array(basename($file),$files_to_keep)) && !in_array(basename($file),$files_to_ignore)){
                 require_once($file);
                 $classeName = basename($file);
-                $classeName = 'Migrations\Migrations\\'.explode('.',explode('_',$classeName)[1])[0];
+                $classeName = explode('.',explode('_',$classeName)[1])[0];
                 $object =new $classeName;
                 if($object instanceof iMigration){
                     $liste[] =[
