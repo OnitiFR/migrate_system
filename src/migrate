@@ -1,0 +1,20 @@
+<?php
+require_once(__DIR__.'/../autoload.php');
+
+use Oniti\Migrations\Migration;
+
+$allowed_args = [
+    'rollback',
+    'step:'
+];
+$options = getopt('',$allowed_args);
+
+$migration = new Migration();
+
+if(array_key_exists('rollback',$options)){
+    $step = array_key_exists('step',$options) ? $options['step'] : null;
+    $migration->rollback($step );
+}
+else{
+    $migration->migrate();
+}

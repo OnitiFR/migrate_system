@@ -1,0 +1,6 @@
+### Env requiered
+
+MYSQL_HOST
+MYSQL_DB
+MYSQL_USER
+MYSQL_PASSWORD

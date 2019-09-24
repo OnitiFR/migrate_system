@@ -1,0 +1,18 @@
+{
+    "name": "oniti/migration_manager",
+    "description": "Gestionnaire de migrations sql",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Francois BOUYER",
+            "email": "francois@oniti.fr"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Oniti\\Migration\\": "src"
+        }
+    }
+}
