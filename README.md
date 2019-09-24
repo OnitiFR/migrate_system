@@ -16,10 +16,6 @@ MYSQL_PASSWORD=MonPassword
 
 Un nouveau systeme de migration a été mis en place avant toutes choses veuillez exécuter la commande suivante
 
-``` shell
-composer dumpautoload
-```
-
 il vous suffit ensuite de créer vos migrations dans le dossiers ```migrations```
 
 en les préfixant du numéro de migration par exemple :
